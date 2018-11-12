@@ -13,5 +13,6 @@ public class PrincipalController {
 	public PrincipalBean bienvenidoJobAplicativo(@PathVariable("name") String name) {
 		return new PrincipalBean(String.format(template,name));
 	}
+	
 
 } 
