@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.yizuslabs.computador.dao.spring.ProductoRepository;
+import com.yizuslabs.computador.exception.ProductoNotFoundException;
 import com.yizuslabs.computador.modelo.ProductoBean;
 
 @Service
@@ -24,7 +25,9 @@ public class ProductoServiceImpl implements ProductoService{
 	@Override
 	public List<ProductoBean> obtenerProductos() {
 		// TODO Auto-generated method stub
-		return productoRepository.obtenerProductos();
+		System.out.println("paso por aqui es");
+
+		return productoRepository.obtenerProductos().isEmpty()?null:productoRepository.obtenerProductos();
 	}
 
 	@Override

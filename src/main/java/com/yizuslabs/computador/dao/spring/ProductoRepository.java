@@ -48,6 +48,8 @@ public class ProductoRepository {
 
 	public List<ProductoBean> obtenerProductos() {
 		// TODO Auto-generated method stub
+		System.out.println("paso por aqui 2");
+
 		return jdbcTemplate.query("select * from productos", new ProductoRowMapper());
 
 	}
